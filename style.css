@@ -1,101 +1,343 @@
-*{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5rem; 
-  
-
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
 }
 
-
-
-.container-fluid{
-    display: flex;
-    justify-content: space-between;
-    gap: 15rem;
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15rem;
 }
 
-
-.navbar-nav{
-    display: flex;
-    justify-content:right;
-    gap: 10rem;
-    font-weight: bolder;
-    font-size: 1rem;
+.navbar-nav {
+  display: flex;
+  justify-content: right;
+  gap: 10rem;
+  font-weight: bolder;
+  font-size: 1rem;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;   
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-drop{
-    width: 200px;
-    animation: dropUpDown 2s infinite ease-in-out;
-    position: relative;
-    right: 10rem;
+.image-drop {
+  width: 200px;
+  animation: dropUpDown 2s infinite ease-in-out;
+  position: relative;
+  right: 10rem;
 }
 
-.image-name{
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    animation: fadeInOut 2s infinite ease-in-out;
+.image-name {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  animation: fadeInOut 2s infinite ease-in-out;
 }
 
-@keyframes dropUpDown{
-    0%, 100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-30px);
-    }
+@keyframes dropUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
 }
 
 @keyframes fadeInOut {
-    0%, 100%{
-        opacity:0;
-    }
-    50%{
-        opacity: 1;
-    }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
+.form-container {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: #c9c9c9;
+  padding: 5rem;
+  border-radius: 10px;
+  position: relative;
+  left: 20rem;
+}
 
-.form-container{
-    width: 46%;
+.btn {
+  display: flex;
+  flex-direction: row;
+}
+
+#btnn {
+  position: relative;
+  right: 5.3rem;
+}
+
+@media (max-width: 420px) {
+  body {
+    width: 20rem;
+    min-height: 13rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    background-color: #c9c9c9;
-    padding: 5rem;
-    border-radius: 10px;
-    position: relative;
-    left: 20rem;
-}
+    gap: 15rem;
+  }
 
-.btn{
+  nav {
+    width: 27rem;
+    margin: 0 3rem;
+    margin-left: 8rem;
+  }
+
+  .container-fluid {
     display: flex;
     flex-direction: row;
-    
-}
+    margin: 0 1rem;
+  }
 
-#btnn{
+  .image-drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    right: 5.3rem;
+    left: 3rem;
+  }
+
+  .image-drop img {
+    width: 20rem;
+  }
+
+  .form-container {
+    position: relative;
+    left: 3rem;
+    bottom: 10rem;
+    width: 23rem;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  body {
+    width: 20rem;
+    min-height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+  }
+
+  nav {
+    width: 27rem;
+    margin: 0 3rem;
+    margin-left: 8rem;
+  }
+
+  .container-fluid {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem;
+  }
+
+  .image-drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 3rem;
+  }
+
+  .image-drop img {
+    width: 20rem;
+  }
+
+  .form-container {
+    position: relative;
+    left: 3rem;
+    bottom: 10rem;
+    width: 23rem;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
+@media (max-width: 360px) {
+  body {
+    width: 16.4rem;
+    min-height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+  }
+
+  nav {
+    width: 27rem;
+    margin: 0 1.5rem;
+    margin-left: 8rem;
+  }
+
+  .container-fluid {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1.2rem;
+  }
+
+  .image-drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 5rem;
+  }
+
+  .image-drop img {
+    width: 15rem;
+  }
+
+  .form-container {
+    position: relative;
+    left: 3rem;
+    bottom: 10rem;
+    width: 20rem;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    gap: 2.1rem;
+  }
+}
+
+@media (max-width: 330px) {
+  body {
+    width: 15rem;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+  }
+
+  nav {
+    width: 21em;
+    margin: 0 1.5rem;
+    margin-left: 8rem;
+  }
+
+  .container-fluid {
+    width: 13rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image-drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 3rem;
+  }
+
+  .image-drop img {
+    width: 11rem;
+  }
+
+  .form-container {
+    position: relative;
+    left: 3rem;
+    bottom: 10rem;
+    width: 18rem;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    gap: 2.2rem;
+  }
+}
+@media (max-width: 340px) {
+  body {
+    width: 15rem;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+  }
+
+  nav {
+    width: 21em;
+    margin: 0 1.5rem;
+    margin-left: 8rem;
+  }
+
+  .container-fluid {
+    width: 13rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .image-drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 3rem;
+  }
+
+  .image-drop img {
+    width: 11rem;
+  }
+
+  .form-container {
+    position: relative;
+    left: 3rem;
+    bottom: 10rem;
+    width: 18rem;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    gap: 2.2rem;
+  }
+}
